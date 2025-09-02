@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Writers' Snake – Clay Phone</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./styles.css" />
+	<script defer src="./script.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<div class="phone">
+			<div class="phone-top">
+				<div class="speaker"></div>
+			</div>
+			<div class="faceplate">
+				<div class="screen-bezel">
+					<div class="screen">
+						<div class="hud">
+							<div id="score">Score: 0</div>
+							<div id="timer">Time: 01:30</div>
+						</div>
+						<div class="lcd-topcode nowrap">Writers' Snake</div>
+						<canvas id="gameCanvas" width="240" height="240" aria-label="Snake game"></canvas>
+						<div id="overlay" class="overlay hidden" role="dialog" aria-live="polite">
+							<h2>Time's Up</h2>
+							<p id="overlay-info">Score: 0</p>
+							<button id="restartBtn" class="btn">Start new round</button>
+						</div>
+					</div>
+				</div>
+				<div class="nav-plate">
+					<button class="soft-key left" aria-label="Left soft key"></button>
+					<div class="nav-oval" aria-hidden="true"></div>
+					<button class="soft-key right" aria-label="Right soft key"></button>
+				</div>
+				<div class="num-pad">
+					<button class="num" data-dir="none">1</button>
+					<button class="num dir-btn" data-dir="up">2</button>
+					<button class="num" data-dir="none">3</button>
+					<button class="num dir-btn" data-dir="left">4</button>
+					<button class="num" data-dir="none">5</button>
+					<button class="num dir-btn" data-dir="right">6</button>
+					<button class="num" data-dir="none">7</button>
+					<button class="num dir-btn" data-dir="down">8</button>
+					<button class="num" data-dir="none">9</button>
+					<button class="num" data-dir="none">*</button>
+					<button class="num" data-dir="none">0</button>
+					<button class="num" data-dir="none">#</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<audio id="eatSound" preload="auto"></audio>
+	<audio id="crashSound" preload="auto"></audio>
+</body>
+</html> 
